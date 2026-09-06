@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+//排序絕對值(abs)過的數字
+
+
+bool cmp(int a, int b)//在主程式前先訂規則
+{
+    if (abs(a) != abs(b))//abs a 不等於 abs b
+   {
+        return abs (a) < abs(b);
+    }
+    return a > b;
+    
+}
+
+
+
+int main() 
+{
+
+int n;    
+vector<int> o;
+
+cin >> n;//輸入數字長度
+
+for (int i=0; i < n; i++)
+    {
+    int temp;
+    cin>> temp;//依序讀取
+    o.push_back(temp);//放進去
+    }
+
+
+sort(o.begin(), o.end(), cmp);//用 sort 排序、傳入 cmp
+
+for (int i = 0; i < n; i++)
+{
+    cout << o[i] << " ";//依序印出
+}
+return 0;
+}
