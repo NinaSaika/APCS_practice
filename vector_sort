@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+
+int n;    
+vector<int> o;
+
+cin >> n;//輸入字串長度
+
+for (int i=0; i < n; i++)
+    {
+    int temp;
+    cin>> temp;//依序讀取
+    o.push_back(temp);
+    }
+
+
+sort(o.begin(), o.end());//用sort排序
+
+
+for (int i = 0; i < n; i++)
+{
+    cout << o[i] << " ";//依序印出
+}
+return 0;
+}
