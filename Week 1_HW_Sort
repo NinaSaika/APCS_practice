@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+//這題是會有多筆測資，所以加入while在最外層，重複做直到測資輸入結束
+
+int main() 
+{
+  
+int n; 
+
+while (cin >>n )//輸入數列長度，若有讀取到 n 則會重複執行
+{
+  
+vector<int> o;
+
+for (int i=0; i < n; i++)
+    {
+    int temp;
+    cin>> temp;//依序讀取
+    o.push_back(temp);
+    }
+
+
+sort(o.begin(), o.end());//用sort排序
+
+
+for (int i = 0; i < n; i++)
+{
+    cout << o[i] << " ";//依序印出
+}
+  cout << "\n";//換行
+}
+return 0;
+}
