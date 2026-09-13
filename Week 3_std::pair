@@ -1,0 +1,48 @@
+#include <bits/stdc++.h>
+using namespace std;
+//每位報名者有(ID,Priority)，1 x y：新增 ID=x、Priority=y 的來賓、2 k：查詢目前優先順序最高的前 k 位來賓，依照 Priority 升序，ID 為次要排序。
+
+int main() 
+{
+
+int Q; 
+cin >> Q;//輸入總操作數 Ｑ
+
+vector<pair<int ,int>> guests;//開 vector ,用 pair 以一對放入
+
+
+while (Q--)//跟 for 同意思，執行直到 Ｑ ＝ 0 )
+{
+    
+    int op;//operation 操作，先讀進來（題目指定）
+    cin >> op;
+    if (op == 1)
+    {
+        int id, priority;
+        cin >> id >> priority;
+        guests.push_back({priority, id});
+    }
+    else
+    {
+        int k;
+        cin >> k;//查詢優先順序最高的前 K 位來賓
+		sort(guests.begin(), guests.end());//排序
+          
+          
+        for (int i=0; i < k; i++)
+        {
+            cout << guests[i].second;
+            
+            if (i == k - 1)
+            {
+                cout << "\n";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+    }
+}
+return 0;
+}
