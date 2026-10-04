@@ -1,0 +1,18 @@
+//老師範例https://www.onlinegdb.com/yh2ZAd9-Dy
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() 
+{
+  string S;
+  cin >> S;
+  int n = s.size();//字串有幾個字母
+  int re = 0;//設 re 來紀錄目前回文最大大小，起始值為0
+  
+  while (s--)
+    
+	{
+      (re ++);
+  
