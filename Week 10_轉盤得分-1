@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+  string S;
+  int r, t;//旋轉次數
+
+  cin >> S >> r;
+  int n = S.size();
+  t = r % n ;//t為輪轉次數（不論正負）
+
+if (t < 0)
+ {
+  t = abs(t) ;
+  while (t--)
+  {
+    S= S + S.front() ;
+	S.erase(0, 1);//移除頭（第一個字元）
+  }
+ }  
+else if (t > 0)
+{
+  while (t--)
+  {
+    S= S.back() + S ;
+    S.pop_back();//移除尾（最後個字元）
+  }
+}
+   
+cout << S;
+
+return 0;
+}
